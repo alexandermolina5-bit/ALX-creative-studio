@@ -1,0 +1,52 @@
+NOMBRE DEL ARCHIVO:
+.github/workflows/build-apk.yml
+
+COPIA TODO EL CONTENIDO DESDE name HASTA EL FINAL:
+
+name: Build ALX Creative Studio APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar proyecto
+        uses: actions/checkout@v4
+
+      - name: Instalar Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Instalar Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.9"
+
+      - name: Compilar APK
+        working-directory: ALX-Creative-Studio-Android
+        run: gradle assembleRelease
+
+      - name: Descargar APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: ALX-Creative-Studio-APK
+          path: ALX-Creative-Studio-Android/app/build/outputs/apk/release/app-release.apk
+
+INSTRUCCIONES:
+1. Descarga esta nota en la computadora.
+2. Abre GitHub y entra a ALX-creative-studio.
+3. Pulsa Actions.
+4. Pulsa set up a workflow yourself.
+5. En el nombre escribe .github/workflows/build-apk.yml.
+6. Abre esta nota, copia solamente el código desde name: hasta el final del bloque YAML y pégalo en GitHub.
+7. Pulsa Commit changes.
+8. En Actions pulsa Run workflow, selecciona main y ejecuta.
+9. Cuando termine, descarga el APK en Artifacts > ALX-Creative-Studio-APK.
