@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#070b14">
+  <meta name="description" content="ALX Creative Studio: crea, aprende y presenta dibujos, logos, fotografías, animaciones, papercraft y cosplay.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="app.css">
+  <title>ALX Creative Studio</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <button class="brand" data-view="inicio" aria-label="Ir al inicio"><span class="brand-mark">A</span><span>ALX <b>Creative</b><small>STUDIO</small></span></button>
+      <nav id="mainNav" aria-label="Herramientas">
+        <button class="nav-item active" data-view="inicio"><span>⌂</span>Inicio</button>
+        <button class="nav-item" data-view="proyectos"><span>▦</span>Mis proyectos</button>
+        <button class="nav-item" data-view="dibujo"><span>✎</span>Dibujo y pintura</button>
+        <button class="nav-item" data-view="logos"><span>◇</span>Diseño de logos</button>
+        <button class="nav-item" data-view="foto"><span>◉</span>Fotomontaje</button>
+        <button class="nav-item" data-view="animacion"><span>▶</span>Animación e intros</button>
+        <button class="nav-item" data-view="publicidad"><span>▤</span>Diseño publicitario</button>
+        <button class="nav-item" data-view="wallpapers"><span>▰</span>Wallpapers</button>
+        <button class="nav-item" data-view="papercraft"><span>⬡</span>Papercraft y cosplay</button>
+        <button class="nav-item" data-view="academia"><span>✦</span>Academia creativa</button>
+        <button class="nav-item" data-view="portafolio"><span>▣</span>Portafolio</button>
+        <button class="nav-item" data-view="asistente"><span>✺</span>Asistente creativo</button>
+      </nav>
+      <div class="user-card"><span class="avatar">AM</span><div><b>Alexander</b><small>Creador · Nivel 1</small></div></div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+        <div><span class="eyebrow">ESPACIO CREATIVO</span><h1 id="pageTitle">Tu estudio</h1></div>
+        <div class="top-actions"><button class="icon-btn" id="themeBtn" aria-label="Cambiar iluminación">☼</button><button class="primary" data-action="new-project">＋ Nuevo proyecto</button></div>
+      </header>
+
+      <section class="view active" id="view-inicio">
+        <article class="hero">
+          <img id="heroImage" src="creative-workshop.jpg" alt="Taller creativo futurista con herramientas de arte, fotografía, papercraft y cosplay">
+          <div class="hero-shade"></div>
+          <div class="hero-copy"><span class="status">● ESTUDIO ACTIVO</span><h2>Imagina. Diseña.<br><em>Hazlo realidad.</em></h2><p>Todo tu proceso creativo, desde el primer boceto hasta la pieza terminada.</p><div class="hero-actions"><button class="primary" data-action="new-project">Comenzar proyecto</button><button class="secondary" data-view="academia">Ver academia</button></div></div>
+        </article>
+        <div class="stats"><article><span>PROYECTOS</span><strong id="statProjects">0</strong><small>Guardados</small></article><article><span>RACHA CREATIVA</span><strong>1 <i>día</i></strong><small>Continúa creando</small></article><article><span>PROGRESO</span><strong id="statProgress">12%</strong><div class="mini-bar"><i></i></div></article><article><span>LOGROS</span><strong id="statBadges">1</strong><small>Insignias obtenidas</small></article></div>
+        <div class="section-head"><div><span class="eyebrow">HERRAMIENTAS</span><h2>¿Qué quieres crear hoy?</h2></div></div>
+        <div class="tool-grid">
+          <button class="tool-card cyan" data-view="dibujo"><span class="tool-icon">✎</span><div><h3>Dibujo y pintura</h3><p>Lienzo, pinceles, color y capas.</p></div><b>→</b></button>
+          <button class="tool-card violet" data-view="logos"><span class="tool-icon">◇</span><div><h3>Diseño de logos</h3><p>Marcas, tipografías y exportación.</p></div><b>→</b></button>
+          <button class="tool-card amber" data-view="foto"><span class="tool-icon">◉</span><div><h3>Fotografía</h3><p>Ajustes y fotomontajes.</p></div><b>→</b></button>
+          <button class="tool-card pink" data-view="animacion"><span class="tool-icon">▶</span><div><h3>Animación e intros</h3><p>Texto, movimiento y efectos.</p></div><b>→</b></button>
+          <button class="tool-card violet" data-view="publicidad"><span class="tool-icon">▤</span><div><h3>Diseño publicitario</h3><p>Afiches, publicaciones, banners y tarjetas.</p></div><b>→</b></button>
+          <button class="tool-card blue" data-view="wallpapers"><span class="tool-icon">▰</span><div><h3>Wallpapers</h3><p>Fondos para celular, computadora y tablet.</p></div><b>→</b></button>
+          <button class="tool-card green" data-view="papercraft"><span class="tool-icon">⬡</span><div><h3>Papercraft y cosplay</h3><p>Patrones, medidas y materiales.</p></div><b>→</b></button>
+          <button class="tool-card blue" data-view="portafolio"><span class="tool-icon">▣</span><div><h3>Portafolio</h3><p>Presenta tus mejores creaciones.</p></div><b>→</b></button>
+        </div>
+      </section>
+
+      <section class="view" id="view-proyectos">
+        <div class="workspace-head"><div><span class="eyebrow">BIBLIOTECA</span><h2>Mis proyectos</h2></div><button class="primary" data-action="new-project">＋ Crear</button></div>
+        <div class="filter-row"><input id="projectSearch" type="search" placeholder="Buscar proyectos"><select id="projectFilter"><option value="all">Todas las categorías</option><option>Dibujo</option><option>Logo</option><option>Fotografía</option><option>Animación</option><option>Publicidad</option><option>Wallpaper</option><option>Papercraft</option><option>Cosplay</option></select></div>
+        <div class="project-grid" id="projectGrid"></div>
+      </section>
+
+      <section class="view" id="view-dibujo">
+        <div class="workspace-head"><div><span class="eyebrow">LIENZO DIGITAL</span><h2>Dibujo y pintura</h2></div><div class="inline-actions"><button class="secondary" id="clearCanvas">Limpiar</button><button class="primary" id="saveDrawing">Guardar dibujo</button></div></div>
+        <div class="editor-layout">
+          <aside class="panel controls-panel"><label>Herramienta<select id="brushTool"><option value="pencil">Lápiz</option><option value="brush">Pincel redondo</option><option value="marker">Marcador</option><option value="calligraphy">Caligrafía</option><option value="airbrush">Aerógrafo</option><option value="spray">Spray</option><option value="neon">Neón</option><option value="line">Línea</option><option value="rectangle">Rectángulo</option><option value="ellipse">Elipse</option><option value="triangle">Triángulo</option><option value="gradient">Degradado</option><option value="eraser">Borrador</option></select></label><label>Color principal<input id="brushColor" type="color" value="#20e3ff"></label><label>Segundo color<input id="brushColor2" type="color" value="#8c6cff"></label><div class="palette" id="colorPalette" aria-label="Paleta de colores"></div><label>Modo de fusión<select id="blendMode"><option value="source-over">Normal</option><option value="multiply">Multiplicar</option><option value="screen">Trama</option><option value="overlay">Superponer</option><option value="soft-light">Luz suave</option><option value="difference">Diferencia</option><option value="color-dodge">Sobreexponer color</option></select></label><label>Tamaño<input id="brushSize" type="range" min="1" max="64" value="8"><output id="brushOut">8 px</output></label><label>Opacidad<input id="brushOpacity" type="range" min="10" max="100" value="100"><output id="opacityOut">100%</output></label><label class="check"><input id="fillShape" type="checkbox"> Rellenar figuras</label><label class="check"><input id="symmetry" type="checkbox"> Simetría</label><button class="secondary" id="undoCanvas">↶ Deshacer</button><p class="hint">Arrastra para dibujar figuras, líneas y degradados.</p></aside>
+          <div class="canvas-wrap"><canvas id="drawCanvas" width="1100" height="680"></canvas></div>
+        </div>
+      </section>
+
+      <section class="view" id="view-logos">
+        <div class="workspace-head"><div><span class="eyebrow">IDENTIDAD VISUAL</span><h2>Diseñador de logos</h2></div><button class="primary" id="downloadLogo">Exportar PNG</button></div>
+        <div class="editor-layout">
+          <aside class="panel controls-panel"><label>Nombre de marca<input id="logoName" value="ALX"></label><label>Descripción<input id="logoTagline" value="CREATIVE STUDIO"></label><label>Estilo<select id="logoShape"><option value="orbit">Órbita</option><option value="shield">Escudo</option><option value="monogram">Monograma</option></select></label><label>Color principal<input id="logoColor" type="color" value="#20e3ff"></label><label>Fondo<input id="logoBg" type="color" value="#08101d"></label><button class="secondary" id="saveLogo">Guardar proyecto</button></aside>
+          <div class="logo-stage"><canvas id="logoCanvas" width="900" height="600"></canvas><small>Vista previa adaptable · Fondo configurable</small></div>
+        </div>
+      </section>
+
+      <section class="view" id="view-foto">
+        <div class="workspace-head"><div><span class="eyebrow">LABORATORIO VISUAL</span><h2>Fotografía y fotomontaje</h2></div><label class="primary file-btn">Subir fotografía<input id="photoUpload" type="file" accept="image/*"></label></div>
+        <div class="editor-layout">
+          <aside class="panel controls-panel"><label>Herramienta<select id="photoTool"><option value="adjust">Ajustes</option><option value="selectRect">Selección rectangular</option><option value="crop">Recortar selección</option><option value="clone">Clonar / reparar</option></select></label><label>Filtro<select id="photoPreset"><option value="none">Original</option><option value="cinema">Cinemático</option><option value="vintage">Vintage</option><option value="noir">Blanco y negro</option><option value="vivid">Color intenso</option><option value="cool">Frío</option><option value="warm">Cálido</option></select></label><label>Brillo<input id="brightness" type="range" min="50" max="150" value="100"></label><label>Contraste<input id="contrast" type="range" min="50" max="150" value="100"></label><label>Saturación<input id="saturation" type="range" min="0" max="200" value="100"></label><label>Desenfoque<input id="blur" type="range" min="0" max="12" value="0"></label><label>Temperatura<input id="temperature" type="range" min="-50" max="50" value="0"></label><label class="check"><input id="grayscale" type="checkbox"> Blanco y negro</label><label>Escala<input id="photoScale" type="range" min="25" max="200" value="100"></label><label>Inclinación<input id="photoSkew" type="range" min="-35" max="35" value="0"></label><div class="button-pair"><button class="secondary" id="rotatePhoto">↻ Girar</button><button class="secondary" id="flipPhoto">⇋ Voltear</button></div><button class="secondary" id="applyCrop">Recortar selección</button><p class="hint">Clonar: toca el origen y luego pinta sobre la zona a reparar.</p><div class="bg-tools"><b>Eliminar fondo</b><label>Tolerancia<input id="bgTolerance" type="range" min="10" max="140" value="55"></label><button class="secondary" id="removeBg">✂ Borrar fondo automático</button><small>Detecta el color de las esquinas. Ideal para fondos lisos.</small></div><button class="secondary" id="resetPhoto">Restablecer todo</button><button class="primary" id="downloadPhoto">Exportar PNG</button></aside>
+          <div class="photo-stage"><canvas id="photoCanvas" width="1100" height="680"></canvas><div class="empty-photo" id="photoEmpty">◉<b>Sube una fotografía</b><small>Podrás corregir luz, color y estilo.</small></div></div>
+        </div>
+      </section>
+
+      <section class="view" id="view-animacion">
+        <div class="workspace-head"><div><span class="eyebrow">MOTION STUDIO</span><h2>Animación e intros</h2></div><button class="primary" id="playIntro">▶ Reproducir</button></div>
+        <div class="editor-layout">
+          <aside class="panel controls-panel"><label>Título<input id="introTitle" value="ALX CREATIVE"></label><label>Subtítulo<input id="introSub" value="IMAGINA · DISEÑA · CREA"></label><label>Fuente<select id="introFont"><option value="system-ui">Impacto moderno</option><option value="Georgia">Cinematográfica</option><option value="monospace">Digital</option><option value="cursive">Fantasía</option><option value="Trebuchet MS">Aventura</option></select></label><label>Color del texto<input id="introColor" type="color" value="#20e3ff"></label><label>Efecto<select id="introEffect"><option value="cinema">Cinemático</option><option value="glitch">Glitch</option><option value="energy">Energía</option><option value="zoomspin">Giro y zoom</option><option value="reveal">Revelado</option><option value="float3d">Profundidad 3D</option><option value="polyfx">PolyFX poligonal</option><option value="explosion">Explosión</option><option value="randomfx">Movimiento aleatorio</option><option value="squash">Aplastar y estirar</option><option value="bouncefx">Rebote</option><option value="wavefx">Onda y deformación</option></select></label><label>Intensidad<input id="introIntensity" type="range" min="1" max="10" value="6"><output id="intensityOut">6</output></label><label>Escenario<select id="introScene"><option value="space">Espacio</option><option value="magic">Cuento mágico 3D</option><option value="cinematic">Estudio cinematográfico</option><option value="neon">Ciudad neón</option></select></label><label class="secondary file-btn">Imagen de fondo<input id="introBg" type="file" accept="image/*"></label><label class="secondary file-btn">Audio propio o con licencia<input id="introAudio" type="file" accept="audio/*"></label><label>Duración<input id="introDuration" type="range" min="2" max="12" value="4"><output id="durationOut">4 s</output></label><button class="secondary" id="saveIntro">Guardar intro</button></aside>
+          <div class="intro-stage space" id="introStage"><div class="particles"></div><div class="intro-logo"><span id="introTitlePreview">ALX CREATIVE</span><small id="introSubPreview">IMAGINA · DISEÑA · CREA</small></div><audio id="introAudioPlayer"></audio></div>
+        </div>
+        <div class="timeline"><div class="time-ruler">0s <span>1s</span><span>2s</span><span>3s</span><span>4s</span></div><div class="track"><b>TÍTULO</b><i style="width:72%"></i></div><div class="track"><b>PARTÍCULAS</b><i class="violet-track" style="width:88%"></i></div><div class="track"><b>AUDIO</b><i class="amber-track" style="width:100%"></i></div></div>
+      </section>
+
+      <section class="view" id="view-publicidad">
+        <div class="workspace-head"><div><span class="eyebrow">PUBLICIDAD VISUAL</span><h2>Diseño publicitario</h2></div><div class="inline-actions"><button class="secondary" id="saveAd">Guardar proyecto</button><button class="primary" id="downloadAd">Exportar PNG</button></div></div>
+        <div class="editor-layout">
+          <aside class="panel controls-panel"><label>Formato<select id="adFormat"><option value="poster">Afiche · 1080×1350</option><option value="story">Historia · 1080×1920</option><option value="square">Publicación · 1080×1080</option><option value="banner">Banner · 1600×600</option><option value="card">Tarjeta · 1050×600</option></select></label><label>Plantilla<select id="adTemplate"><option value="modern">Moderna</option><option value="sale">Promoción</option><option value="event">Evento</option><option value="minimal">Minimalista</option></select></label><label>Título<input id="adTitle" value="CREA SIN LÍMITES"></label><label>Mensaje<textarea id="adText" rows="3">Diseño, fotografía y animación en un solo estudio.</textarea></label><label>Llamada a la acción<input id="adCta" value="DESCÚBRELO AHORA"></label><label>Color principal<input id="adColor" type="color" value="#20e3ff"></label><label>Color secundario<input id="adColor2" type="color" value="#8c6cff"></label><label class="secondary file-btn">Agregar imagen<input id="adImage" type="file" accept="image/*"></label><label class="check"><input id="adSafe" type="checkbox" checked> Mostrar zona segura</label></aside>
+          <div class="design-stage"><canvas id="adCanvas" width="1080" height="1350"></canvas><small>Guías, márgenes y composición ajustados al formato.</small></div>
+        </div>
+      </section>
+
+      <section class="view" id="view-wallpapers">
+        <div class="workspace-head"><div><span class="eyebrow">FONDOS PERSONALIZADOS</span><h2>Diseño de wallpapers</h2></div><div class="inline-actions"><button class="secondary" id="saveWallpaper">Guardar proyecto</button><button class="primary" id="downloadWallpaper">Exportar PNG</button></div></div>
+        <div class="editor-layout">
+          <aside class="panel controls-panel"><label>Dispositivo<select id="wallFormat"><option value="phone">Celular · 1080×2400</option><option value="desktop">Computadora · 1920×1080</option><option value="tablet">Tablet · 1600×2560</option><option value="ultrawide">Ultrapanorámico · 3440×1440</option></select></label><label>Estilo<select id="wallStyle"><option value="aurora">Aurora</option><option value="neon">Neón</option><option value="minimal">Minimalista</option><option value="particles">Partículas</option><option value="geometric">Geométrico</option></select></label><label>Texto<input id="wallTitle" value="IMAGINA · CREA"></label><label>Color 1<input id="wallColor" type="color" value="#061122"></label><label>Color 2<input id="wallColor2" type="color" value="#653cff"></label><label>Brillo<input id="wallGlow" type="range" min="0" max="100" value="70"></label><label>Profundidad<input id="wallDepth" type="range" min="0" max="100" value="55"></label><label class="secondary file-btn">Imagen central<input id="wallImage" type="file" accept="image/*"></label><label class="check"><input id="wallSafe" type="checkbox" checked> Zona segura para iconos y reloj</label></aside>
+          <div class="design-stage wallpaper-stage"><canvas id="wallCanvas" width="1080" height="2400"></canvas><small>Un mismo diseño puede adaptarse a distintos dispositivos.</small></div>
+        </div>
+      </section>
+
+      <section class="view" id="view-papercraft">
+        <div class="workspace-head"><div><span class="eyebrow">FABRICACIÓN CREATIVA</span><h2>Papercraft y cosplay</h2></div><button class="primary" id="saveBuild">Guardar plan</button></div>
+        <div class="papercraft-upload panel"><div><span class="eyebrow">ARCHIVOS PAPERCRAFT</span><h3>Visualiza, ajusta e imprime tus patrones</h3><p>PDF, PNG, JPG y SVG editables. PDO se importa para registrar datos y calcular materiales.</p></div><label class="primary file-btn">Abrir archivo<input id="patternUpload" type="file" accept=".pdo,.pdf,image/png,image/jpeg,image/svg+xml,application/pdf"></label></div>
+        <div class="pattern-editor panel" id="patternEditor"><div class="pattern-toolbar"><label>Papel<select id="paperSize"><option value="A4">A4</option><option value="Letter">Carta</option><option value="Legal">Legal</option><option value="A3">A3</option></select></label><label>Orientación<select id="paperOrientation"><option value="portrait">Vertical</option><option value="landscape">Horizontal</option></select></label><label>Escala<input id="patternScale" type="range" min="25" max="200" value="100"><output id="patternScaleOut">100%</output></label><button class="secondary" id="rotatePattern">↻ Girar</button><button class="secondary" id="fitPattern">Ajustar hoja</button><button class="primary" id="printPattern">Imprimir patrón</button></div><div class="pattern-stage" id="patternStage"><div class="pattern-empty"><span>▧</span><b>Abre un archivo papercraft</b><small>Aquí podrás revisarlo antes de imprimir.</small></div><canvas id="patternCanvas" width="794" height="1123"></canvas><iframe id="patternPdf" title="Vista previa del archivo PDF"></iframe></div></div>
+        <div class="build-grid">
+          <article class="panel build-form"><h3>Planificador de pieza</h3><label>Proyecto<input id="buildName" placeholder="Ej. Casco futurista"></label><label>Tipo<select id="buildType"><option>Máscara</option><option>Casco</option><option>Armadura</option><option>Espada de utilería</option><option>Accesorio</option></select></label><div class="two"><label>Altura corporal (cm)<input id="bodyHeight" type="number" value="170"></label><label>Escala base (cm)<input id="baseHeight" type="number" value="175"></label></div><label>Material<select id="material"><option value="eva5">EVA foam 5 mm</option><option value="card">Cartulina 200 g</option><option value="board">Cartón</option><option value="eva10">Foam 10 mm</option></select></label><label>Páginas del patrón<input id="patternPages" type="number" min="1" value="12"></label><div class="two"><label>Precio por lámina/paquete<input id="materialPrice" type="number" min="0" step="0.01" value="4"></label><label>Margen extra (%)<input id="wasteMargin" type="number" min="0" max="80" value="15"></label></div><button class="secondary" id="calculateBuild">Calcular escala y materiales</button></article>
+          <article class="panel build-result"><div class="wire-helmet"><span>⬡</span></div><span class="eyebrow">RESULTADO</span><h3 id="scaleResult">Escala 97%</h3><p id="materialResult">Prepara 12 páginas y aproximadamente 1.2 m² de material.</p><ol><li><b>Preparar</b><small>Imprime, numera y comprueba medidas.</small></li><li><b>Construir</b><small>Corta, une y prueba el ajuste.</small></li><li><b>Terminar</b><small>Sella, pinta y añade detalles seguros.</small></li></ol><div class="safety">ⓘ Diseña accesorios ficticios sin filo, aptos para exhibición y cosplay.</div></article>
+        </div>
+      </section>
+
+      <section class="view" id="view-academia">
+        <div class="workspace-head"><div><span class="eyebrow">APRENDE CREANDO</span><h2>Academia creativa</h2></div><div class="level-chip">Nivel 1 · Explorador</div></div>
+        <div class="course-grid" id="courseGrid"></div>
+      </section>
+
+      <section class="view" id="view-portafolio">
+        <div class="workspace-head"><div><span class="eyebrow">TU OBRA</span><h2>Portafolio profesional</h2></div><button class="primary" id="exportPortfolio">Preparar presentación</button></div>
+        <div class="portfolio-cover"><span>PORTAFOLIO CREATIVO</span><h2>Alexander Molina</h2><p>Dibujo · Diseño · Fotografía · Animación · Cosplay</p></div>
+        <div class="portfolio-grid" id="portfolioGrid"></div>
+      </section>
+
+      <section class="view" id="view-asistente">
+        <div class="assistant-layout">
+          <article class="assistant-intro"><span class="assistant-orb">✺</span><span class="eyebrow">COPILOTO CREATIVO</span><h2>Convierte una idea en un proyecto</h2><p>Describe qué quieres crear y recibirás una ruta clara de concepto, materiales, colores y etapas.</p></article>
+          <article class="panel assistant-chat"><div class="chat-log" id="chatLog"><div class="message ai"><b>ALX Creativo</b><p>Hola, Alexander. ¿Qué quieres crear hoy?</p></div></div><form id="assistantForm"><textarea id="ideaInput" rows="3" placeholder="Ej. Quiero diseñar una máscara futurista azul para cosplay…" required></textarea><button class="primary">Crear plan creativo ✦</button></form></article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><form class="modal-card" id="projectForm"><div class="modal-head"><div><span class="eyebrow">NUEVO PROYECTO</span><h2 id="modalTitle">¿Qué vas a crear?</h2></div><button type="button" class="icon-btn" id="closeModal">✕</button></div><label>Nombre<input id="newName" maxlength="50" required placeholder="Nombre del proyecto"></label><label>Categoría<select id="newCategory"><option>Dibujo</option><option>Logo</option><option>Fotografía</option><option>Animación</option><option>Publicidad</option><option>Wallpaper</option><option>Papercraft</option><option>Cosplay</option></select></label><label>Notas<textarea id="newNotes" rows="3" placeholder="Idea, materiales o próximos pasos"></textarea></label><button class="primary" type="submit">Crear proyecto</button></form></div>
+  <div class="toast" id="toast" role="status"></div>
+  <nav class="mobile-nav"><button data-view="inicio">⌂<small>Inicio</small></button><button data-view="proyectos">▦<small>Proyectos</small></button><button data-view="dibujo">✎<small>Crear</small></button><button data-view="academia">✦<small>Aprender</small></button><button data-view="portafolio">▣<small>Portafolio</small></button></nav>
+  <script src="app.js"></script>
+</body>
+</html>
